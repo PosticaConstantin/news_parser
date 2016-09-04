@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+
+    {% for p in xrange(1,total_pages+1) %}
+    {% if p == page %}
+        {{p}}
+    {% else %}
+        <a href="?page={{p}}">{{p}}</a>
+    {% end %}
+{% end %}
+
+    <a href="/upload" style="float:right">Adauga Stirea Ta</a>
+
+<div>
+    {% for item in news %}
+    <div class="pointdiv" style="width:auto; height:300px;margin:10px">
+        <p>{{item["date"].strftime("%d.%m.%Y %H:%M:%S")}}</p>
+        <p><a href="{{item['link']}}" target="_blank"><h4>{{item["title"]}}</h4></a></p>
+        <p><img src='{{item["image"]}}' style="width:160px;height:90px;"> {% raw item["description"] %}</p>
+        <p>{{item["source"]}}</p>
+    </div>
+
+    <hr>
+    {% end %}
+
+    {% for p in xrange(1,total_pages+1) %}
+    {% if p == page %}
+        {{p}}
+    {% else %}
+        <a href="?page={{p}}">{{p}}</a>
+    {% end %}
+{% end %}
+</div>
+</body>
+</html>

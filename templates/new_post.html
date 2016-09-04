@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Postati stirea</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data" style="width:250px;display:inline-block">
+
+        <input type="text" name="title" placeholder="Titlul" style="width:200px;margin:10px">
+        <textarea name="description" placeholder="Descrierea" style="width:200px;margin:10px"></textarea>
+        <input type="text" name="link" placeholder="Adresa web" style="width:200px;margin:10px">
+        <input type="file" name="image" style="margin:30px;">
+        <input type="text" name="source" placeholder="Sursa" style="width:200px;margin:10px">
+        <input type="submit" value="Adauga anunt" style="width:200px;margin:10px">
+    </form>
+</body>
+</html>
