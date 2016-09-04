@@ -1,0 +1,27 @@
+######### Python
+*.pyc
+
+######### C
+*.o
+*.so
+
+######### MacOS
+.DS_Store
+
+######### Windows
+ehthumbs.db
+Icon?
+Thumbs.db
+
+######### Eclipse
+.project
+.pydevproject
+.settings
+
+######### Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+###### PyCharm #######
+.idea
