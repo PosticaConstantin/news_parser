@@ -7,7 +7,6 @@ import tornado.gen
 
 import settings
 import db
-'test'
 
 class MainHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
